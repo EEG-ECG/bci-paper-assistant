@@ -1,0 +1,41 @@
+# Secrets — never commit
+.env
+.env.local
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Models & vector DB (太大，且可由代码重建)
+chroma_db/
+*.bin
+*.safetensors
+data/bm25_index.pkl
+
+# 原始论文 PDF：有版权 + 体积大，不上传（README 里列出论文清单和获取方式）
+Article/
+
+# 解析出的纯文本和 chunk（派生自论文，不上传；保留 chunks 复现的话可单独白名单）
+data/raw_text/
+data/chunks/sample_for_qa.txt
+
+# Gradio 运行时产物
+.gradio/
+
+# 数据中间产物（保留 chunks.jsonl 在 git 里方便复现，原始 PDF 不传）
+
+# Claude Code 本地配置（与项目无关）
+.claude/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db

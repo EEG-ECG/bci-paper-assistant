@@ -1,0 +1,28 @@
+{
+  "chunk_size_target": 1200,
+  "chunk_overlap": 200,
+  "total_chunks": 1598,
+  "total_docs": 17,
+  "size_min": 68,
+  "size_max": 1200,
+  "size_mean": 1027.5,
+  "per_doc_chunks": {
+    "16453_Omni_iEEG_A_Large_Scale_": 138,
+    "2023-Seeing Beyond the Brain": 80,
+    "Brain-OF_ An Omnifunctional Foundation Model for fMRI, EEG and MEG": 109,
+    "Jiang et al. - 2024 - Large Brain Model for Learning Generic Representations with Tremendous EEG Data in BCI": 85,
+    "Lei et al. - 2025 - SleepLM Modality Alignment of LLMs with EEG Signals": 24,
+    "Li et al. - 2025 - BrainFLORA Uncovering Brain Concept Representation via Multimodal Neural Embeddings": 88,
+    "Scotti et al. - 2024 - MindEye2 Shared-Subject Models Enable fMRI-To-Image With 1 Hour of Data": 103,
+    "Tang et al. - 2026 - One Brain, Omni Modalities Towards Unified Non-Invasive Brain Decoding with Large Language Models": 65,
+    "Thapa et al. - 2026 - A multimodal sleep foundation model for disease prediction": 99,
+    "TRIBE_v2": 91,
+    "Wang et al. - 2023 - BrainBERT Self-supervised representation learning for intracranial recordings": 74,
+    "Wang et al. - 2024 - Brain Treebank Large-scale intracranial recordings from naturalistic language stimuli": 94,
+    "Wang et al. - 2025 - CBraMod A Criss-Cross Brain Foundation Model for EEG Decoding": 152,
+    "Wang et al. - 2025 - Towards a general-purpose foundation model for fMRI analysis": 69,
+    "Xiao et al. - 2025 - BrainOmni A Brain Foundation Model for Unified EEG and MEG Signals": 96,
+    "Yuan et al. - 2025 - BrainWave A Brain Signal Foundation Model for Clinical Applications": 91,
+    "Zhou et al. - 2025 - CSBrain A Cross-scale Spatiotemporal Brain Foundation Model for EEG Decoding": 140
+  }
+}

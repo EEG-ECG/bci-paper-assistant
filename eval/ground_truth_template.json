@@ -1,0 +1,62 @@
+{
+  "_schema_note": "评测集模板。每条 entry 一个 Q&A。Step 4 评测时会用这个跑 retrieval recall + answer accuracy。",
+  "_fields": {
+    "id": "唯一 id（q001, q002, ...）",
+    "question": "问题（中/英都行）",
+    "expected_answer": "标准答案（事实性、可对比）",
+    "source_papers": "答案来源论文的 stem（与 chunks.jsonl 中 source 字段对应），用于评估 retrieval 是否召回了正确论文",
+    "answer_type": "factoid（事实型，如数字/名称）| reasoning（需要综合）| comparative（跨论文对比）",
+    "difficulty": "easy | medium | hard",
+    "tags": "可选标签，如 dataset / sota / architecture / benchmark"
+  },
+  "entries": [
+    {
+      "id": "q001",
+      "question": "CBraMod is pretrained on how many BCI tasks and how many public datasets?",
+      "expected_answer": "10 downstream BCI tasks, 12 public datasets",
+      "source_papers": ["Wang et al. - 2025 - CBraMod A Criss-Cross Brain Foundation Model for EEG Decoding"],
+      "answer_type": "factoid",
+      "difficulty": "easy",
+      "tags": ["benchmark", "dataset"]
+    },
+    {
+      "id": "q002",
+      "question": "BrainOmni pretraining 用了多少小时的 EEG 和 MEG 数据？",
+      "expected_answer": "1997 hours of EEG and 656 hours of MEG",
+      "source_papers": ["Xiao et al. - 2025 - BrainOmni A Brain Foundation Model for Unified EEG and MEG Signals"],
+      "answer_type": "factoid",
+      "difficulty": "easy",
+      "tags": ["dataset", "pretraining"]
+    },
+    {
+      "id": "q003",
+      "question": "How does BrainWave perform on Alzheimer's disease (AD-65) compared to baselines?",
+      "expected_answer": "(填入具体 AUROC 数字和 baselines 名字)",
+      "source_papers": ["Yuan et al. - 2025 - BrainWave A Brain Signal Foundation Model for Clinical Applications"],
+      "answer_type": "factoid",
+      "difficulty": "medium",
+      "tags": ["benchmark", "sota"]
+    },
+    {
+      "id": "q004",
+      "question": "What is the difference between CBraMod's criss-cross attention and full EEG modeling?",
+      "expected_answer": "Criss-cross uses two parallel attention mechanisms to model spatial and temporal dependencies separately; full EEG modeling models all dependencies together, ignoring their heterogeneity.",
+      "source_papers": ["Wang et al. - 2025 - CBraMod A Criss-Cross Brain Foundation Model for EEG Decoding"],
+      "answer_type": "reasoning",
+      "difficulty": "medium",
+      "tags": ["architecture"]
+    },
+    {
+      "id": "q005",
+      "question": "Which brain foundation models support both EEG and MEG modalities?",
+      "expected_answer": "BrainOmni and Brain-OF (Brain-OF additionally supports fMRI).",
+      "source_papers": [
+        "Xiao et al. - 2025 - BrainOmni A Brain Foundation Model for Unified EEG and MEG Signals",
+        "Brain-OF_ An Omnifunctional Foundation Model for fMRI, EEG and MEG"
+      ],
+      "answer_type": "comparative",
+      "difficulty": "hard",
+      "tags": ["architecture", "modality"]
+    }
+  ]
+}

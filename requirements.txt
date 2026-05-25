@@ -1,0 +1,19 @@
+# Step 1: PDF parsing + chunking
+pdfplumber>=0.11.0
+langchain>=0.3.0
+langchain-text-splitters>=0.3.0
+tqdm>=4.66.0
+
+# Step 2: embedding + vector store
+sentence-transformers>=3.0.0
+chromadb>=0.5.0
+
+# Step 3: LLM API (DeepSeek 兼容 OpenAI 格式)
+openai>=1.40.0
+python-dotenv>=1.0.0
+
+# Step 3.5: Hybrid retrieval (BM25) + reranker (cross-encoder via sentence-transformers)
+rank_bm25>=0.2.2
+
+# Step 5: Web UI
+# gradio>=4.40.0
